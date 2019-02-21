@@ -1,2 +1,4 @@
+enum-compat==0.0.2
+i3ipc==1.6.0
 numpy==1.16.1
 opencv-python==4.0.0.21

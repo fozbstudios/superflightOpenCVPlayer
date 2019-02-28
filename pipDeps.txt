@@ -1,4 +1,8 @@
+cffi==1.12.2
 enum-compat==0.0.2
 i3ipc==1.6.0
+mss==4.0.2
 numpy==1.16.1
 opencv-python==4.0.0.21
+pycparser==2.19
+sounddevice==0.3.13

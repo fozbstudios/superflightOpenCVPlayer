@@ -8,12 +8,22 @@ duration =3 #seconds
     # sample all sources
     # let user pivck new default
     # reset default back via pulse
-soundArr = sd.rec(duration * sd.default.samplerate,dtype='float64',device=8)
+    #
+    # soud device 8 is pulse
+deviceIndex=None
+devices=sd.query_devices() 
+for i in range(len(devices)):
+    if devices[i]['name'] == 'pulse':
+        deviceIndex=i
+if deviceIndex==None:
+    raise Exception("pulse device not available")
+
+soundArr = sd.rec(duration * sd.default.samplerate,dtype='float64',device=deviceIndex)
 sd.wait()# block until recording is done 
 print(soundArr)
 print("playing in 10!")
 time.sleep(10)
 while True:
     print("playing")
-    sd.play(soundArr,device=8)
+    sd.play(soundArr,device=deviceIndex)
     sd.wait()

@@ -2,6 +2,7 @@
 # Created by https://www.gitignore.io/api/python,opencv,jupyternotebook,jupyternotebooks
 # Edit at https://www.gitignore.io/?templates=python,opencv,jupyternotebook,jupyternotebooks
 
+.vscode*
 ### JupyterNotebook ###
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
